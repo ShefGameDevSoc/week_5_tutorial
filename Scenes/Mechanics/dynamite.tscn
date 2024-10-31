@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://cxayqwt4afcmr"]
+
+[ext_resource type="Script" path="res://Scripts/dynamite.gd" id="1_jnabk"]
+[ext_resource type="Texture2D" uid="uid://da335iq375jsh" path="res://Assets/dynamite.png" id="1_kihec"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ea6mp"]
+size = Vector2(3, 9)
+
+[node name="Dynamite" type="CharacterBody2D"]
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("1_jnabk")
+
+[node name="Dynamite_sprite" type="Sprite2D" parent="."]
+position = Vector2(0, -8)
+texture = ExtResource("1_kihec")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.5, -4.5)
+shape = SubResource("RectangleShape2D_ea6mp")

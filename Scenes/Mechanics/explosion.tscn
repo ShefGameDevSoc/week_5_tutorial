@@ -1,0 +1,39 @@
+[gd_scene load_steps=5 format=3 uid="uid://csoyt4v2q22mf"]
+
+[ext_resource type="Texture2D" uid="uid://cfihior4r1qvu" path="res://Assets/mushroom cloud v1.png" id="1_eqxqw"]
+[ext_resource type="Script" path="res://Scripts/explosion.gd" id="2_lys0f"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_88ebw"]
+radius = 63.0079
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_yuk4f"]
+radius = 19.0
+
+[node name="Explosion" type="Area2D"]
+script = ExtResource("2_lys0f")
+
+[node name="SpriteTimer" type="Timer" parent="."]
+one_shot = true
+autostart = true
+
+[node name="Explosion" type="Sprite2D" parent="."]
+position = Vector2(0, -32)
+texture = ExtResource("1_eqxqw")
+
+[node name="MainCollision" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_88ebw")
+
+[node name="PhysicsTimer" type="Timer" parent="."]
+wait_time = 0.1
+one_shot = true
+autostart = true
+
+[node name="SmallExplosion" type="Area2D" parent="."]
+
+[node name="SmallCollision" type="CollisionShape2D" parent="SmallExplosion"]
+shape = SubResource("CircleShape2D_yuk4f")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="timeout" from="SpriteTimer" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="PhysicsTimer" to="." method="_on_physics_timer_timeout"]
+[connection signal="area_entered" from="SmallExplosion" to="." method="_on_small_explosion_area_entered"]

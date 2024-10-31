@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://ckocjvqah0pti"]
+
+[ext_resource type="PackedScene" uid="uid://cbsclrcg0cis4" path="res://Scenes/UI/UI.tscn" id="1_onh08"]
+
+[node name="World" type="Node2D"]
+
+[node name="UI" parent="." instance=ExtResource("1_onh08")]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+visible = false
+offset_right = 1155.0
+offset_bottom = 651.0
+color = Color(1, 0, 0, 0.337255)

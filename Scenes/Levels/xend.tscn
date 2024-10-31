@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=3 uid="uid://breha2v3akrm7"]
+
+[ext_resource type="Script" path="res://Scripts/end.gd" id="1_14p4s"]
+
+[node name="XEnd" type="Node2D"]
+script = ExtResource("1_14p4s")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 525.0
+offset_top = 121.0
+offset_right = 619.0
+offset_bottom = 170.0
+text = "Level select:"
+
+[node name="ListStartLoc" type="Node2D" parent="."]
+position = Vector2(536, 202)

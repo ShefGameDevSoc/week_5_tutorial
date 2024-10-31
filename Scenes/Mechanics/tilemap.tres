@@ -1,0 +1,15 @@
+[gd_resource type="TileSet" load_steps=6 format=3 uid="uid://drmq2dyo63xx3"]
+
+[ext_resource type="PackedScene" uid="uid://cjxr2awl3vos7" path="res://Scenes/Mechanics/box.tscn" id="1_23b5u"]
+[ext_resource type="PackedScene" uid="uid://cwsnkon7yocat" path="res://Scenes/Mechanics/destructable_box.tscn" id="2_qx47y"]
+[ext_resource type="PackedScene" uid="uid://cer8wg34vqan4" path="res://Scenes/Mechanics/death_gears.tscn" id="3_itfps"]
+[ext_resource type="PackedScene" uid="uid://bnrttgq4dp7u3" path="res://Scenes/Mechanics/finish_flag.tscn" id="4_vc6sn"]
+
+[sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_tegie"]
+scenes/1/scene = ExtResource("1_23b5u")
+scenes/2/scene = ExtResource("2_qx47y")
+scenes/3/scene = ExtResource("3_itfps")
+scenes/4/scene = ExtResource("4_vc6sn")
+
+[resource]
+sources/0 = SubResource("TileSetScenesCollectionSource_tegie")
